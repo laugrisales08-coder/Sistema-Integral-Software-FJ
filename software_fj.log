@@ -1,0 +1,66 @@
+2026-11-21 16:49:28,206 | INFO | Cliente registrado: C01
+2026-11-21 16:49:28,207 | ERROR | Operación 2: registro inválido de cliente
+Traceback (most recent call last):
+  File "/mnt/data/SoftwareFJ/main.py", line 22, in ejecutar_demostracion
+    sistema.registrar_cliente(Cliente("C02", "A", "correo incorrecto", "123"))
+                              ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/data/SoftwareFJ/modelos.py", line 32, in __init__
+    self.nombre = nombre
+    ^^^^^^^^^^^
+  File "/mnt/data/SoftwareFJ/modelos.py", line 43, in nombre
+    raise DatoInvalidoError("El nombre debe tener al menos 2 caracteres.")
+excepciones.DatoInvalidoError: El nombre debe tener al menos 2 caracteres.
+2026-11-21 16:49:28,208 | INFO | Cliente registrado: C03
+2026-11-21 16:49:28,208 | INFO | Servicio registrado: S01
+2026-11-21 16:49:28,208 | INFO | Servicio registrado: S02
+2026-11-21 16:49:28,208 | INFO | Servicio registrado: S03
+2026-11-21 16:49:28,208 | ERROR | Operación 7: servicio con precio inválido
+Traceback (most recent call last):
+  File "/mnt/data/SoftwareFJ/main.py", line 57, in ejecutar_demostracion
+    servicio_invalido = ReservaSala("S04", "Sala inválida", -100)
+                        ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/data/SoftwareFJ/modelos.py", line 79, in __init__
+    raise DatoInvalidoError("El precio base debe ser un número mayor que cero.")
+excepciones.DatoInvalidoError: El precio base debe ser un número mayor que cero.
+2026-11-21 16:49:28,208 | INFO | Reserva creada: R01
+2026-11-21 16:49:28,208 | ERROR | Operación 11: reserva con cliente inexistente
+Traceback (most recent call last):
+  File "/mnt/data/SoftwareFJ/main.py", line 86, in ejecutar_demostracion
+    sistema.crear_reserva("R02", "NO_EXISTE", "S02", 1)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/data/SoftwareFJ/sistema.py", line 47, in crear_reserva
+    raise ElementoNoEncontradoError("No se encontró el cliente solicitado.")
+excepciones.ElementoNoEncontradoError: No se encontró el cliente solicitado.
+2026-11-21 12:13:33,732 | INFO | Cliente registrado: C01
+2026-11-21 12:13:33,792 | ERROR | Operación 2: registro inválido de cliente
+Traceback (most recent call last):
+  File "C:\Users\Dell\OneDrive\Desktop\SoftwareFJ\main.py", line 22, in ejecutar_demostracion
+    sistema.registrar_cliente(Cliente("C02", "A", "correo incorrecto", "123"))
+                              ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Dell\OneDrive\Desktop\SoftwareFJ\modelos.py", line 32, in __init__
+    self.nombre = nombre
+    ^^^^^^^^^^^
+  File "C:\Users\Dell\OneDrive\Desktop\SoftwareFJ\modelos.py", line 43, in nombre
+    raise DatoInvalidoError("El nombre debe tener al menos 2 caracteres.")
+excepciones.DatoInvalidoError: El nombre debe tener al menos 2 caracteres.
+2026-11-21 12:13:33,862 | INFO | Cliente registrado: C03
+2026-11-21 12:13:33,944 | INFO | Servicio registrado: S01
+2026-11-21 12:13:34,021 | INFO | Servicio registrado: S02
+2026-11-21 12:13:34,091 | INFO | Servicio registrado: S03
+2026-11-21 12:13:34,130 | ERROR | Operación 7: servicio con precio inválido
+Traceback (most recent call last):
+  File "C:\Users\Dell\OneDrive\Desktop\SoftwareFJ\main.py", line 57, in ejecutar_demostracion
+    servicio_invalido = ReservaSala("S04", "Sala inválida", -100)
+                        ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Dell\OneDrive\Desktop\SoftwareFJ\modelos.py", line 79, in __init__
+    raise DatoInvalidoError("El precio base debe ser un número mayor que cero.")
+excepciones.DatoInvalidoError: El precio base debe ser un número mayor que cero.
+2026-11-21 12:13:34,163 | INFO | Reserva creada: R01
+2026-11-21 12:13:34,176 | ERROR | Operación 11: reserva con cliente inexistente
+Traceback (most recent call last):
+  File "C:\Users\Dell\OneDrive\Desktop\SoftwareFJ\main.py", line 86, in ejecutar_demostracion
+    sistema.crear_reserva("R02", "NO_EXISTE", "S02", 1)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Dell\OneDrive\Desktop\SoftwareFJ\sistema.py", line 47, in crear_reserva
+    raise ElementoNoEncontradoError("No se encontró el cliente solicitado.")
+excepciones.ElementoNoEncontradoError: No se encontró el cliente solicitado.
